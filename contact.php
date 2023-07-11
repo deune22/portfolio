@@ -16,7 +16,7 @@
 <header class="col-12 bg-black">
     <?php include 'includes/menu.inc'; ?>
 </header>
-<div id="pricing-banner" class="col-12 p-5">
+<div id="contact-banner" class="col-12 p-5">
     <div class="banner-text-container">
         <h1>
             Contact
@@ -51,32 +51,97 @@
             </div>
 
             <div class="col-12 p-2 my-5 d-flex justify-content-end">
-                <button class="me-2">Submit</button>
+                <button class="me-2" id="contact-btn" onclick="submitForm()" type="button">Submit</button>
             </div>
         </form>
+
+        <div id="alertContainer" class="alert" role="alert">
+            <p id="alertContent"></p>
+        </div>
     </div>
 </div>
 
 
 <div class=" col-12 d-flex flex-wrap justify-content-center">
     <div class="blurry between-blurry">
-        <h2 class="pt-5 mt-5 text-center">Contact us for a custom quote</h2>
-        <p class="pb-5 mb-5 text-center">If you have any other design requirements we can discuss and quote
-            accordingly</p>
+        <h2 class="pt-5 mt-5 text-center">Custom Requests</h2>
+        <p class="pb-5 mb-5 text-center">If you do not see what you're looking for then please contact us to start a personalised yourney</p>
     </div>
 </div>
 <footer>
     <?php include 'includes/footer.inc'; ?>
 </footer>
 </body>
-<script>
-    const myCarouselElement = document.querySelector('#carouselExampleSlidesOnly')
-    const carousel = new bootstrap.Carousel(myCarouselElement, {
-        interval: 2000,
-        wrap: false
-    })
-</script>
 <script src="js/jquery-3.7.0.min.js"></script>
 <script src="js/script.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf7WfQmAAAAAHhOpdRIh9csj9ptrvKo6EV3_GuX"></script>
+<script>
+    function submitForm() {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lf7WfQmAAAAAHhOpdRIh9csj9ptrvKo6EV3_GuX', {action: 'homepage'}).then(function (token) {
+                sendForm(token);
+            });
+        });
+    }
+
+    function sendForm(token) {
+
+        $('#contact-btn').html('Sending <i class="fas fa-circle-notch fa-spin"></i>');
+        const body = {
+            'token': token,
+            'message': $('#message').val(),
+            'name': $('#name').val(),
+            'email': $('#email').val(),
+            'number': $('#number').val(),
+            'company': $('#companyname').val(),
+        };
+
+        console.log(body);
+
+        $.post("php/contact.php", body, function (data, status) {
+            $('#contact-btn').html('Send');
+            if (status !== 'success') {
+                showAlert('error', "There was an error submitting your enquiry.");
+            } else {
+                const body = JSON.parse(data);
+                if (body.type === 'success') {
+                    clearForm();
+                    $('#exampleModal').modal('hide');
+                }
+                showAlert(body.type, body.message);
+            }
+        });
+    }
+
+    function clearForm() {
+        $('#message').val('');
+        $('#name').val('');
+        $('#email').val('');
+        $('#number').val('');
+    }
+</script>
+<script>
+
+    function showAlert(type, message) {
+        const alertContainer = $('#alertContainer');
+        $('#alertContent').text(message);
+        if (type === 'error') {
+            alertContainer.addClass('alert-danger');
+        } else {
+            alertContainer.addClass('alert-success');
+        }
+        alertContainer.addClass('active');
+        setTimeout(hideAlert, 5000);
+    }
+
+    function hideAlert() {
+        const alertContainer = $('#alertContainer');
+        alertContainer.removeClass('active');
+        alertContainer.removeClass('alert-danger');
+        alertContainer.removeClass('alert-success');
+        $('#alertContent').text('');
+    }
+</script>
 </html>
 
