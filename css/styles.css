@@ -929,14 +929,18 @@ button:active {
 }
 
 .card-stack {
-    width: 90%;
-    height: 550px;
-    position: absolute;
+    width: 95%;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .card-stack .card-list {
-    width: 70%;
+    width: 95%;
+    position: relative;
+    height: 600px;
 }
+
 
 .card-stack .card-list__image {
     height: 100%;
@@ -987,6 +991,26 @@ button:active {
     top: 48px;
     width: 80%;
     left: 80px;
+}
+
+
+@media all and (max-width: 1200px) {
+    .card-stack-container {
+        min-height: 784px;
+    }
+
+    .card-stack .card-list {
+        width: 90%;
+    }
+    .card-stack .card-list li:nth-child(1), .card-stack .card-list li:nth-child(2), .card-stack .card-list li:nth-child(3) {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .card-stack .card-list li:nth-child(1), .card-stack .card-list li:nth-child(2), .card-stack .card-list li:nth-child(3) {
+        left: 0px;
+    }
 }
 
 .card-stack .buttons {

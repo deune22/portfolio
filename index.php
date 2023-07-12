@@ -35,23 +35,23 @@
     </div>
 </div>
 <div class="home-square-container col-12 d-flex flex-wrap justify-content-around">
-    <div class="col-12 col-md-11 d-flex flex-wrap justify-content-center">
-        <div class="col-3 home-square-1">
+    <div class="col-12 col-md-11 d-flex flex-wrap justify-content-center px-3">
+        <div class="col-12 col-md-6 col-lg-3 home-square-1">
             <h2 class="pb-2">GRAPHICS</h2>
         </div>
-        <div class="col-3 home-square-2">
+        <div class="col-12 col-md-6 col-lg-3 home-square-2">
             <h2 class="pb-2">DEVELOPMENT</h2>
         </div>
-        <div class="col-3 home-square-3">
+        <div class="col-12 col-md-6 col-lg-3 home-square-3">
             <h2 class="pb-2">MAINTENANCE</h2>
         </div>
-        <div class="col-3 home-square-4">
+        <div class="col-12 col-md-6 col-lg-3 home-square-4">
             <h2 class="pb-2">NETWORKING</h2>
         </div>
     </div>
 </div>
 <div class="col-12 d-flex flex-wrap bg-black py-3 py-md-5  px-1 px-md-5 justify-content-center">
-    <div class="col-12 col-md-11 d-flex flex-wrap justify-content-center pb-5 mb-5 mt-5">
+    <div class="col-12 col-md-11 d-flex flex-wrap justify-content-center pb-5 mb-5 mt-5 px-3">
 
         <h2 class="text-center text-white mb-3 mt-5 c-border ps-2">Creative Development</h2>
         <p class="col-12 text-center text-white mb-5">Our team is comprised out of graphic designers, developers, devops
@@ -162,17 +162,13 @@
     </div>
     <div class="col-12 d-flex flex-wrap justify-content-center mb-5 card-stack-container">
         <div class="card-stack">
-
-            <!-- Prev <a href="https://www.jqueryscript.net/tags.php?/Navigation/">Navigation</a> -->
             <button class="buttons prev" type="button"><</button>
-
-            <!-- Card List -->
-            <ul class="card-list">
-                <li class="card">
-                    <div class="inner-card col-12 col-md-8 col-lg-6">
+            <ul class="card-list ps-0">
+                <li class="card d-flex flex-wrap">
+                    <div class="inner-card col-12 col-xl-6">
                         <img src="images/gen/1.jpg" class="card-list__image">
                     </div>
-                    <div class="inner-text col-12 col-md-4 col-lg-6">
+                    <div class="inner-text col-12 col-xl-6">
                         <h3 class="card-list__text">Web Design</h3>
                         <p>Web design is like being the captain of a digital spaceship, embarking on a cosmic quest
                             through the vast universe of creativity.
@@ -191,11 +187,11 @@
                             galaxies of content and experience the boundless wonders of the digital cosmos.</p>
                     </div>
                 </li>
-                <li class="card">
-                    <div class="inner-card col-12 col-md-8 col-lg-6">
+                <li class="card d-flex flex-wrap">
+                    <div class="inner-card col-12 col-xl-6">
                         <img src="images/gen/2.jpg" class="card-list__image">
                     </div>
-                    <div class="inner-text col-12 col-md-4 col-lg-6">
+                    <div class="inner-text col-12 col-xl-6">
                         <h3 class="card-list__text">Web App Development</h3>
                         <p>Web app development is like building a digital playground where imagination runs wild and
                             coding becomes the ultimate game.
@@ -218,11 +214,11 @@
                             sense of digital awe in their hearts.</p>
                     </div>
                 </li>
-                <li class="card activeNow">
-                    <div class="inner-card col-12 col-md-8 col-lg-6">
+                <li class="card d-flex flex-wrap activeNow">
+                    <div class="inner-card col-12 col-xl-6">
                         <img src="images/gen/3.jpg" class="card-list__image">
                     </div>
-                    <div class="inner-text col-12 col-md-4 col-lg-6">
+                    <div class="inner-text col-12 col-xl-6">
                         <h3 class="card-list__text">Graphic Design</h3>
                         <p>Graphic design is the artistic playground where colors, shapes, and ideas collide in a
                             wild
@@ -247,12 +243,10 @@
                     </div>
                 </li>
             </ul>
-
-            <!-- Next Navigation -->
             <button class="buttons next" type="button">></button>
-
         </div>
     </div>
+    <div class="clearfix"></div>
     <!--    <div class="col-3 col-lg-2 px-0 pop-option-1">-->
     <!--        <div class="col-12 px-0 option-coll">-->
     <!--            <div class="option-header">Custom One-Pager</div>-->
@@ -309,7 +303,7 @@
 </div>
 <div class="home-icons-container col-12 d-flex flex-wrap justify-content-around py-5">
     <div class="col-12 col-lg-11 d-flex flex-wrap">
-        <div class="home-icons-container-inner col-3 py-5 px-5">
+        <div class="home-icons-container-inner col-12 col-md-6 col-lg-3 py-5 px-5">
             <a class=" d-flex flex-wrap justify-content-center" href="pricing.php#graphic-design-container">
                 <div class="product-icon-1"></div>
                 <h5 class="col-12 mb-4">Graphic design</h5>
@@ -317,7 +311,7 @@
                 <span><i class="fa fa-3x fa-chevron-down mt-2"></i></span>
             </a>
         </div>
-        <div class="home-icons-container-inner col-3 py-5 px-5">
+        <div class="home-icons-container-inner col-12 col-md-6 col-lg-3 py-5 px-5">
             <a class=" d-flex flex-wrap justify-content-center" href="pricing.php#web-design-container">
                 <div class="product-icon-2"></div>
                 <h5 class="col-12 mb-4">Web Design</h5>
@@ -325,7 +319,7 @@
                 <span><i class="fa fa-3x fa-chevron-down mt-2"></i></span>
             </a>
         </div>
-        <div class="home-icons-container-inner col-3 py-5 px-5">
+        <div class="home-icons-container-inner col-12 col-md-6 col-lg-3 py-5 px-5">
             <a class=" d-flex flex-wrap justify-content-center" href="pricing.php#web-development-container">
                 <div class="product-icon-3"></div>
                 <h5 class="col-12 mb-4">Web Development</h5>
@@ -333,7 +327,7 @@
                 <span><i class="fa fa-3x fa-chevron-down mt-2"></i></span>
             </a>
         </div>
-        <div class="home-icons-container-inner col-3 py-5 px-5">
+        <div class="home-icons-container-inner col-12 col-md-6 col-lg-3 py-5 px-5">
             <a class=" d-flex flex-wrap justify-content-center" href="pricing.php#it-support-container">
                 <div class="product-icon-4"></div>
                 <h5 class="col-12 mb-4">IT Support</h5>
