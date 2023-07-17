@@ -5,8 +5,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Contact us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact gravitysplash for any website design, website development, web-app development, website maintenance and network supoort">
+    <link rel="icon" type="image/x-icon" href="images/favi/favicon.ico">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>

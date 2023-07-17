@@ -5,8 +5,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Portfolio of work</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of software development, website design, graphic design">
+    <link rel="icon" type="image/x-icon" href="images/favi/favicon.ico">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>

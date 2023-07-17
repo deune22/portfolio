@@ -5,9 +5,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Website design | Web development | Graphic design | Network support</title>
+    <title>Website design | Web development | Software development | Graphic design | Network support</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="We do web development, web design, graphic design, project management and network support">
+    <link rel="icon" type="image/x-icon" href="images/favi/favicon.ico">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
